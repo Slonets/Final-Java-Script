@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Weather</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <h1>MY WEATHER</h1>
+
+            <form class="input">
+                <input type="search" name="cityInput" id="cityInput">
+                <button id="buttonSeach">Знайти</button>
+            </form>
+        </header>
+
+        <header class="header2">
+            <nav>
+                <a onclick="showInfo1()">Today</a>
+                <a onclick="showInfo2()">5-day forecast</a>
+            </nav>
+        </header>
+
+        <main id="info1">
+            <section class="currentWeather">
+
+                <div class="zagolovok">
+                    <h3>CURRENT WEATHER</h3>
+                    <h3 class="currentDay"></h3>
+                </div>
+
+                <div class="info_currentWheather">
+
+                    <div class="imgWeather">
+                        <img id="myImage">
+                        <h2 id="myImageText"></h2>
+                    </div>
+
+                    <div class="gradus">
+                        <h1 id="gradus"></h1>
+                        <h3 id="fellGradus"></h3>
+                    </div>
+
+                    <div class="sunActive">
+                        <h3 id="sunRise"></h3>
+                        <h3 id="sunSet"></h3>
+                        <h3 id="Duration"></h3>
+                    </div>
+
+                </div>
+            </section>
+            <!-- section #1 close -->
+
+            <section class="oneHourCityWeather">
+
+                <div class="titel_2">
+                    <h3>HOURLY</h3>
+                </div>
+
+                <div class="hourWeather">
+
+                    <h3>TODAY</h3>
+
+                    <h3 id="h1"></h3>
+
+                    <h3 id="h2"></h3>
+
+                    <h3 id="h3"></h3>
+
+                    <h3 id="h4"></h3>
+
+                    <h3 id="h5"></h3>
+
+                    <h3 id="h6"></h3>
+                </div>
+
+                <div class="hourImg">
+
+                    <img id="img1">
+
+                    <img id="img2">
+
+                    <img id="img3">
+
+                    <img id="img4">
+
+                    <img id="img5">
+
+                    <img id="img6">
+
+                </div>
+
+                <div class="forecast">
+
+                    <h3>Forecast</h3>
+
+                    <h3 id="f1"></h3>
+
+                    <h3 id="f2"></h3>
+
+                    <h3 id="f3"></h3>
+
+                    <h3 id="f4"></h3>
+
+                    <h3 id="f5"></h3>
+
+                    <h3 id="f6"></h3>
+
+                </div>
+
+                <div class="tempC">
+
+                    <h3 id="t0"></h3>
+
+                    <h3 id="t1"></h3>
+
+                    <h3 id="t2"></h3>
+
+                    <h3 id="t3"></h3>
+
+                    <h3 id="t4"></h3>
+
+                    <h3 id="t5"></h3>
+
+                    <h3 id="t6"></h3>
+                </div>
+
+                <div class="realFeel">
+
+                    <h3>RealFeel</h3>
+
+                    <h3 id="r1"></h3>
+
+                    <h3 id="r2"></h3>
+
+                    <h3 id="r3"></h3>
+
+                    <h3 id="r4"></h3>
+
+                    <h3 id="r5"></h3>
+
+                    <h3 id="r6"></h3>
+
+                </div>
+
+
+                <div class="wind">
+
+                    <h3>Wind (km/h)</h3>
+
+                    <h3 id="w1"></h3>
+
+                    <h3 id="w2"></h3>
+
+                    <h3 id="w3"></h3>
+
+                    <h3 id="w4"></h3>
+
+                    <h3 id="w5"></h3>
+
+                    <h3 id="w6"></h3>
+
+                </div>
+
+            </section>
+            <!-- section #2 close -->
+
+            <section class="NearbyPlaces">
+
+                <h3>Nearby Places</h3>
+
+                <div class="GreatDiv1">
+
+                    <div>
+                        <h3 id="nearCityName1"></h3>
+                        <img id="nearCityImg1">
+                        <h3 id="nearCityTemp1"></h3>
+                    </div>
+
+                    <div class="div1">
+
+                        <h3 id="nearCityName2"></h3>
+                        <img id="nearCityImg2">
+                        <h3 id="nearCityTemp2"></h3>
+
+                    </div>
+
+                </div>
+
+                <div class="GreatDiv2">
+
+                    <div>
+
+                        <h3 id="nearCityName3"></h3>
+                        <img id="nearCityImg3">
+                        <h3 id="nearCityTemp3"></h3>
+
+                    </div>
+
+                    <div class="div2">
+
+                        <h3 id="nearCityName4"></h3>
+                        <img id="nearCityImg4">
+                        <h3 id="nearCityTemp4"></h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- section #3 close -->
+
+        </main>
+        <!-- main #1 close -->
+
+        <main id="info2">
+
+            <section class="wheatherDayWeek">
+
+                <div id="weatherCard1">
+
+                    <h1 id="hDay1"></h1>
+                    <h3 id="h3Day1"></h3>
+                    <img id="imgDay1">
+                    <h1 id="pDay1"></h1>
+                    <h3 id="h32Day1"></h3>
+
+                </div>
+
+
+                <div id="weatherCard2">
+
+                    <h1 id="hDay2"></h1>
+                    <h3 id="h3Day2"></h3>
+                    <img id="imgDay2">
+                    <h1 id="pDay2"></h1>
+                    <h3 id="h32Day2"></h3>
+
+                </div>
+
+
+                <div id="weatherCard3">
+
+                    <h1 id="hDay3"></h1>
+                    <h3 id="h3Day3"></h3>
+                    <img id="imgDay3">
+                    <h1 id="pDay3"></h1>
+                    <h3 id="h32Day3"></h3>
+
+                </div>
+
+                <div id="weatherCard4">
+                    <h1 id="hDay4"></h1>
+                    <h3 id="h3Day4"></h3>
+                    <img id="imgDay4">
+                    <h1 id="pDay4"></h1>
+                    <h3 id="h32Day4"></h3>
+
+                </div>
+
+                <div id="weatherCard5">
+                    <h1 id="hDay5"></h1>
+                    <h3 id="h3Day5"></h3>
+                    <img id="imgDay5">
+                    <h1 id="pDay5"></h1>
+                    <h3 id="h32Day5"></h3>
+                </div>
+
+            </section>
+
+            <section class="oneHourCityWeather_2" id="oneHourCityWeather_2">
+                <div class="titel_2">
+                    <h3>HOURLY</h3>
+                </div>
+
+                <div class="hourWeather_2">
+
+                    <h3 id="dayName"></h3>
+
+                    <h3 id="hod1"></h3>
+
+                    <h3 id="hod2"></h3>
+
+                    <h3 id="hod3"></h3>
+
+                    <h3 id="hod4"></h3>
+
+                    <h3 id="hod5"></h3>
+
+                    <h3 id="hod6"></h3>
+                </div>
+
+                <div class="hourImg">
+
+                    <img id="foto1">
+
+                    <img id="foto2">
+
+                    <img id="foto3">
+
+                    <img id="foto4">
+
+                    <img id="foto5">
+
+                    <img id="foto6">
+
+                </div>
+
+                <div class="forecast">
+
+                    <h3>Forecast</h3>
+
+                    <h3 id="forecast1"></h3>
+
+                    <h3 id="forecast2"></h3>
+
+                    <h3 id="forecast3"></h3>
+
+                    <h3 id="forecast4"></h3>
+
+                    <h3 id="forecast5"></h3>
+
+                    <h3 id="forecast6"></h3>
+
+                </div>
+
+                <div class="tempC_2">
+
+                    <h3 id="temp0"></h3>
+
+                    <h3 id="temp1"></h3>
+
+                    <h3 id="temp2"></h3>
+
+                    <h3 id="temp3"></h3>
+
+                    <h3 id="temp4"></h3>
+
+                    <h3 id="temp5"></h3>
+
+                    <h3 id="temp6"></h3>
+                </div>
+
+                <div class="realFeel">
+
+                    <h3>RealFeel</h3>
+
+                    <h3 id="real1"></h3>
+
+                    <h3 id="real2"></h3>
+
+                    <h3 id="real3"></h3>
+
+                    <h3 id="real4"></h3>
+
+                    <h3 id="real5"></h3>
+
+                    <h3 id="real6"></h3>
+
+                </div>
+
+
+                <div class="wind">
+
+                    <h3>Wind (km/h)</h3>
+
+                    <h3 id="wind1"></h3>
+
+                    <h3 id="wind2"></h3>
+
+                    <h3 id="wind3"></h3>
+
+                    <h3 id="wind4"></h3>
+
+                    <h3 id="wind5"></h3>
+
+                    <h3 id="wind6"></h3>
+
+                </div>
+
+            </section>
+
+        </main> 
+        <!-- close main info 2 -->
+
+    </div>
+    <!-- close basic div -->
+    <script src="./js1.js"></script>
+</body>
+
+</html>

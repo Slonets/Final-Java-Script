@@ -1,0 +1,474 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main
+{
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+}
+
+.header 
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(234, 229, 229);
+}
+
+.header h1 {
+    margin-top: 1%;
+    color: blue;
+    margin-left: 40px;
+}
+
+.input {
+    margin-top: 10px;
+    margin-right: 40px;
+    width: 300px;
+    height: 35px;
+}
+
+#cityInput {
+    font-size: 20px;
+    width: 60%;
+    height: 100%;
+}
+
+#buttonSeach {
+    margin-left: 5px;
+    position: absolute;
+    width: 100px;
+    height: 34px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3775dd;
+    box-shadow: 0 2px #21487f;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+
+.header2 {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(45, 45, 45);
+}
+
+.header2 nav {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.header2 nav a {
+    width: 150px;
+    height: 100%;
+    font-size: 23px;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10px;
+    border: 2px solid rgb(87, 77, 138);
+    text-decoration: none;
+}
+
+.header2 nav a:hover {
+    border: 3px solid rgb(144, 185, 47);
+}
+
+.currentWeather {
+    margin: 15px auto;
+    background-color: rgb(219, 230, 230);
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+
+.zagolovok {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+}
+
+.zagolovok>:nth-child(1) {
+    margin-left: 15px;
+    color: rgb(61, 61, 165);
+    font-size: 20px;
+}
+
+.zagolovok>:nth-child(2) {
+    font-size: 30px;
+    margin-right: 15px;
+    color: rgb(61, 61, 165);
+}
+
+.info_currentWheather {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info_currentWheather div {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    text-align: center;
+}
+
+#myImage {
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+}
+
+#myImageText {
+    color: rgb(104, 102, 102);
+}
+
+#gradus {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+#fellGradus {
+    font-style: italic;
+    font-size: 20px;
+    color: grey;
+}
+
+.sunActive {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#sunRise,
+#sunSet,
+#Duration {
+    margin-top: 10px;
+}
+
+.oneHourCityWeather 
+{
+    margin: 15px auto;
+    background-color: rgb(219, 230, 230);
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+}
+
+.oneHourCityWeather_2
+{
+    margin: 15px auto;
+    background-color: rgb(219, 230, 230);
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+}
+
+.titel_2 {
+    width: 100%;
+    height: 30px;
+}
+
+.titel_2 h3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    color: rgb(61, 61, 165);
+    font-size: 20px;
+}
+
+.hourWeather 
+{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;   
+}
+
+.hourWeather>:nth-child(1)
+{        
+    font-size: 20px;
+    color: grey;
+}
+
+
+.hourImg
+{
+    margin-top: 5px;
+    margin-left: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 20px;
+}
+
+.hourImg img
+{
+    width: 100px;
+    height: 100px;
+}
+
+.forecast 
+{    
+    /* margin-left: 10px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.forecast>:nth-child(1)
+{
+    font-size: 20px;
+    color: grey;
+}
+
+.tempC
+{    
+    margin-top: 10px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+}
+
+.tempC>:nth-child(1)
+{
+    font-size: 20px;
+    color: grey;
+}
+
+#t1,
+#t2,
+#t3,
+#t4,
+#t5,
+#t6{
+    margin-left: 30px;
+}
+
+.realFeel
+{    
+    margin-top: 20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.realFeel>:nth-child(1)
+{
+    font-size: 20px;
+    color: grey;
+}
+
+.wind
+{    
+    margin-top: 20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.wind>:nth-child(1)
+{
+    font-size: 20px;
+    color: grey;
+}
+
+.NearbyPlaces
+{
+    margin: 15px auto;
+    background-color: rgb(219, 230, 230);
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+
+.NearbyPlaces>:nth-child(1)
+{
+    font-size: 20px;
+    color: rgb(61, 61, 165);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.GreatDiv1, .GreatDiv2
+{
+    margin: 20px auto;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;    
+}
+
+
+.GreatDiv1 div
+{    
+    width: 350px;
+    height: 70px;
+    background-color: rgb(215, 207, 207);
+    display: flex;
+    flex-direction: row; 
+   
+}
+
+
+.GreatDiv2 div
+{    
+    width: 350px;
+    height: 70px;
+    background-color: rgb(215, 207, 207);
+    display: flex;
+    flex-direction: row;
+
+}
+
+.div1, .div2
+{
+background-color: rgb(215, 207, 207);
+margin-left: 10px;
+}
+
+#nearCityName1, #nearCityName2, #nearCityName3, #nearCityName4
+{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    height: 100%;
+    min-width: 150px;    
+}
+
+#nearCityImg1, #nearCityImg2, #nearCityImg3, #nearCityImg4
+{
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+#nearCityTemp1, #nearCityTemp2, #nearCityTemp3, #nearCityTemp4
+{
+    margin-top: 17px;  
+    margin-left: 20px;  
+    font-size: 20px;
+    height: 100%;
+    width: 80px;
+}
+
+.wheatherDayWeek
+{
+    margin: 15px auto;
+    background-color: rgb(219, 230, 230);
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.wheatherDayWeek div
+{
+   width: 20%;
+   height: 100%;
+   border-right: 2px solid silver;
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.wheatherDayWeek div:hover
+{
+   background-color: #b6c9e8;
+   border: 3px solid rgb(144, 185, 47);
+}
+
+#hDay1, #hDay2, #hDay3, #hDay4, #hDay5
+{
+    text-transform: uppercase;
+    color: #21487f;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#h3Day1, #h3Day2, #h3Day3, #h3Day4, #h3Day5
+{
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#imgDay1,#imgDay2, #imgDay3, #imgDay4, #imgDay5 
+{
+    width: 120px;
+    height: 110px;
+    margin: 10px auto;
+}
+
+#pDay1, #pDay2, #pDay3, #pDay4, #pDay5
+{
+    text-align: center;
+}
+
+#h32Day1, #h32Day2, #h32Day3, #h32Day4, #h32Day5
+{
+    text-align: center;
+    color: grey;
+    font-size: 20px;    
+}
+
+.hourWeather_2 
+{
+    margin-top: 15px;     
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;   
+}
+
+.tempC_2
+{    
+    margin-top: 10px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Три колонки з однаковою шириною */
+    grid-gap: 10px;
+    text-align: center;
+}
